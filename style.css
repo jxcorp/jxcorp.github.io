@@ -220,7 +220,7 @@ main {
 /* --- Hero Section --- */
 
 .hero-section {
-    padding: 150px 0 100px 0;
+    padding: 90px 0 100px 0;
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -246,7 +246,7 @@ main {
     width: 100%;
     height: 100%;
     z-index: 1; 
-    opacity: 0.3; 
+    opacity: 0.4; 
     pointer-events: none; 
 }
 
@@ -254,7 +254,7 @@ main {
     width: 100%;
     height: auto;
      /* Desktop: Cover the entire area */
-    filter: blur(5px) grayscale(50%); 
+    filter: blur(1px) grayscale(50%); 
 }
 
 /* Ensure the text is highly readable, especially over the background image */
@@ -340,6 +340,7 @@ main {
 }
 
 /* --- Team Section --- */
+/* --- Team Section --- */
 .team-section {
     text-align: center;
 }
@@ -357,13 +358,42 @@ main {
     text-align: center;
 }
 
+/* -------------------------------------- */
+/* REVISED: Team Photo Placeholder Styling */
+/* -------------------------------------- */
 .team-photo-placeholder {
     width: 150px;
     height: 150px;
-    background-color: var(--color-accent);
+    /* Use the surface color for a clean placeholder background */
+    background-color: var(--color-surface); 
     border-radius: 50%;
     margin: 0 auto 15px auto;
-    box-shadow: 0 0 20px rgba(106, 90, 205, 0.4);
+    /* Maintain the subtle accent glow effect */
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.4); 
+    /* Important: Hide any parts of the image that spill out of the circle */
+    overflow: hidden; 
+    
+    /* Optional: Add a subtle glassmorphism border effect */
+    border: 3px solid var(--glass-border);
+}
+
+/* NEW: Styling for the actual Image inside the placeholder */
+.team-photo-placeholder img {
+    /* Ensure the image covers the entire circle */
+    width: 100%;
+    height: 100%;
+    /* Crop and scale the image to fill the container without distortion */
+    object-fit: cover; 
+    /* Apply a transition for hover effects */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect for the Image (makes the photo pop a bit) */
+.team-photo-placeholder:hover img {
+    /* Subtle zoom on hover */
+    transform: scale(1.05); 
+    /* Optional: Slight color shift or filter for visual interest */
+    filter: brightness(1.1); 
 }
 
 .team-member h4 {
