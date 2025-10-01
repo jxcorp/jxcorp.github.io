@@ -82,6 +82,10 @@ h3 { font-size: 1.5rem; }
     padding: 30px;
 }
 
+.glassmorphism-nav {
+    padding: 15px 30px; /* Adjust padding for nav bar */
+}
+
 .glassmorphism-card {
     transition: transform 0.3s ease;
 }
@@ -131,7 +135,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 15px 0;
     border-radius: 0; /* Full width nav */
 }
 
@@ -186,20 +189,25 @@ header {
     padding: 10px 15px;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1;
+    font-weight: 500;
 }
 
 /* ---------------------------------- */
 /* 6. Main Sections */
 /* ---------------------------------- */
 main {
-    padding-top: 50px;
+   padding: 50px;
 }
 
 .content-section {
     padding: 100px 0;
     position: relative;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .section-description {
@@ -210,9 +218,10 @@ main {
 }
 
 /* --- Hero Section --- */
+
 .hero-section {
     padding: 150px 0 100px 0;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,6 +229,39 @@ main {
     position: relative;
     overflow: hidden;
 }
+
+.hero-section .container {
+    /* Ensures the text content sits above the background visual */
+    position: relative;
+    z-index: 20; 
+    padding-top: 50px; 
+}
+
+/* Hero Visual Placeholder Styling (Fixed Sizing) */
+.hero-visual-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    opacity: 0.3; 
+    pointer-events: none; 
+}
+
+.hero-visual-placeholder img {
+    width: 100%;
+    height: auto;
+     /* Desktop: Cover the entire area */
+    filter: blur(5px) grayscale(50%); 
+}
+
+/* Ensure the text is highly readable, especially over the background image */
+.hero-headline, .hero-subtext {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+}
+
 
 .hero-headline {
     font-size: 4.5rem;
@@ -277,20 +319,13 @@ main {
     align-items: center;
     overflow: hidden;
     position: relative;
+    box-shadow: var(--color-shadow);
 }
 
 .product-item {
     text-align: center;
     max-width: 600px;
     padding: 20px;
-}
-
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: var(--color-shadow);
 }
 
 .inline-link {
@@ -403,7 +438,14 @@ footer {
   }
 }
 
+/* --- Mobile Specific Styles (Max Width 768px) --- */
 @media (max-width: 768px) {
+    /* --- General Layout Adjustments --- */
+    .content-section {
+        padding: 60px 0; /* Less padding for shorter scroll */
+    }
+    
+    /* --- Header & Navigation --- */
     .header-content {
         flex-direction: column;
         gap: 15px;
@@ -411,17 +453,52 @@ footer {
     .nav-list {
         gap: 20px;
     }
+    
+    .glass-button {
+        font-size: 0.9rem;
+    }
+
+    /* --- Hero Section Fixes (Crucial for mobile) --- */
+    .hero-section {
+        min-height: 70vh; /* Slightly shorter hero */
+        padding: 100px 0 60px 0; /* Reduced vertical padding */
+    }
+
     .hero-headline {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Significantly reduced headline size */
+        margin: 0 auto 15px auto;
     }
+    
     .hero-subtext {
-        font-size: 1.1rem;
+        font-size: 1rem; /* Smaller subtext */
     }
+
+    .cta-button {
+        padding: 12px 25px; /* Smaller CTA button */
+    }
+
+    /* Visual Placeholder Adjustments for Mobile */
+    .hero-visual-placeholder {
+        opacity: 0.15; /* Further reduce image opacity */
+    }
+    
+    .hero-visual-placeholder img {
+        /* On mobile, use 'contain' and limit size to prevent massive image zoom */
+        object-fit: contain; 
+        max-width: 80%;
+        max-height: 80%;
+        width: auto;
+        height: auto;
+    }
+
+    /* --- Card and Grid Adjustments --- */
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    
+    /* --- Footer Adjustments --- */
     .footer-content {
         flex-direction: column;
         gap: 15px;
-    }
-    .cards-grid {
-        grid-template-columns: 1fr;
     }
 }
