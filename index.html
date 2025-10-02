@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JXCorp - Software for the Future</title>
-    <meta name="description" content="JXCorp, the software division of Jeremia Xavier. We are a collective of developers building creative, non-typical software solutions.">
-    <link rel="stylesheet" href="style.css">
+    <title>JXCorp - Engineering the Future of Software</title>
+    <meta name="description" content="JXCorp, the software division of Jeremia Xavier. We build creative, high-performance software solutions that tackle complexity across industries.">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
     <link rel="preload" href="bg-dark.jpg" as="image">
@@ -17,14 +17,20 @@
     <header class="glassmorphism-nav">
         <div class="container header-content">
             <a href="#hero" class="logo" aria-label="JXCorp Home">JXCorp</a>
-            <nav aria-label="Main Navigation">
+            
+            <button id="menu-toggle" class="glass-button mobile-only" aria-label="Toggle Navigation Menu">
+                &#9776; </button>
+            
+            <nav id="main-nav" aria-label="Main Navigation">
                 <ul class="nav-list">
-                    <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
-                    <li><a href="#products" class="nav-link">Software</a></li>
+                    <li><a href="#philosophy" class="nav-link">Approach</a></li>
+                    <li><a href="#products" class="nav-link">Solutions</a></li>
+                    <li><a href="#impact" class="nav-link">Scale</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            
             <div class="utility-controls">
                 <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="glass-button">
                     <span class="icon-moon" aria-hidden="true">🌙</span>
@@ -38,33 +44,35 @@
 
         <section id="hero" class="hero-section">
             <div class="hero-visual-placeholder" aria-hidden="false">
-                <img src="./images/banner.webp" alt="Abstract visualization of data and code lines, representing creative software development.">
+                <img src="./images/banner.webp" alt="Abstract visualization of massive data streams and complex algorithms, representing high-level problem solving.">
             </div>
 
             <div class="container">
                 <h1 class="hero-headline">
-                    We <span class="accent-text">Code</span> Beyond the Curve.
+                    We <span class="accent-text">Engineer</span> Software Beyond the <span class="accent-text">Curve</span>.
                 </h1>
-                <p class="hero-subtext">JXCorp is not typical. We are the creative software developers building what others only dream of.</p>
-                <a href="#products" class="cta-button">Explore Our Creative Tech</a>
+                <p class="hero-subtext">JXCorp is a collective of specialized developers building high-performance, non-typical solutions for the next decade of technology.</p>
+                <a href="#philosophy" class="cta-button">Explore Our Approach</a>
             </div>
             </section>
 
-        <section id="philosophy" class="content-section">
+        <section id="philosophy" class="content-section feature-section">
             <div class="container">
-                <h2>Our <span class="accent-text">Non-Typical</span> Philosophy</h2>
-                <div class="cards-grid">
-                    <article class="glassmorphism-card">
-                        <h3>Break the Mold</h3>
-                        <p>We reject 'standard' solutions. Our goal is to build software that redefines its category.</p>
+                <h2>Our <span class="accent-text">First-Principles</span> Approach</h2>
+                <p class="section-description">We reject conventional constraints, focusing instead on technical excellence and deep, developer-led insight to solve complex problems.</p>
+
+                <div class="feature-grid">
+                    <article class="glassmorphism-card feature-card">
+                        <h3>Technical Autonomy</h3>
+                        <p>Our solutions are built from the ground up, prioritizing performance and maintainability over off-the-shelf integration.</p>
                     </article>
-                    <article class="glassmorphism-card">
-                        <h3>Developer-Led</h3>
-                        <p>Built by developers, for a better future. Technical excellence is our non-negotiable standard.</p>
+                    <article class="glassmorphism-card feature-card">
+                        <h3>Complexity as a Feature</h3>
+                        <p>We embrace difficult domains, treating complexity as a requirement to be managed and abstracted, not avoided.</p>
                     </article>
-                    <article class="glassmorphism-card">
-                        <h3>Human-Centric</h3>
-                        <p>Technology should feel like magic. We prioritize smooth, intuitive, and delightful user experiences.</p>
+                    <article class="glassmorphism-card feature-card">
+                        <h3>Elegant Scale</h3>
+                        <p>Software should feel intuitive, regardless of the scale. We design for the end-user, delivering magic behind a simple interface.</p>
                     </article>
                 </div>
             </div>
@@ -72,37 +80,75 @@
 
         <!-- <section id="products" class="content-section products-section">
             <div class="container">
-                <h2>Featured <span class="accent-text">Software</span></h2>
-                <div class="carousel-placeholder" role="region" aria-label="Featured Software Showcase">
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/600x400/6A5ACD/FFFFFF?text=Product+A+UI" alt="Screenshot of Stellaris, our AI-powered coding assistant, featuring a sleek dark interface.">
-                        <h3>Stellaris: AI-Powered Code Engine</h3>
-                        <p>An intelligent platform that not only writes code but *thinks* creatively to optimize architecture.</p>
-                        <a href="#" class="inline-link">View Demo &rarr;</a>
+                <h2>Featured <span class="accent-text">Development Solutions</span></h2>
+                <div class="product-showcase">
+                    
+                    <div class="product-item dark-glass-panel">
+                        <div class="product-info">
+                            <h3>Project Stellaris: Generative Architecture</h3>
+                            <p>An autonomous system for modeling, generating, and optimizing massive backend architecture, resulting in unparalleled deployment speed and resilience.</p>
+                            <a href="#" class="inline-link">View Engineering Details &rarr;</a>
+                        </div>
+                        <div class="product-visual-placeholder">
+                            <img src="https://via.placeholder.com/600x400/101010/8A2BE2?text=Complex+Code+Visualization" alt="Screenshot of Stellaris, a sophisticated dark-mode dashboard showing predictive code flows.">
+                        </div>
                     </div>
+
+                    <div class="product-item dark-glass-panel reversed">
+                        <div class="product-info">
+                            <h3>Project Echelon: Real-Time Visualization Layer</h3>
+                            <p>A high-performance rendering engine capable of aggregating real-time data feeds into rich, interactive, and customizable 3D operational environments.</p>
+                            <a href="#" class="inline-link">Explore Visualization Demos &rarr;</a>
+                        </div>
+                        <div class="product-visual-placeholder">
+                            <img src="https://via.placeholder.com/600x400/101010/00FFFF?text=Interactive+UI+Dashboard" alt="Screenshot of Echelon, a dark, detailed map interface with data overlays.">
+                        </div>
                     </div>
+                    
+                </div>
             </div>
         </section> -->
+        
+        <section id="impact" class="content-section impact-section">
+            <div class="container text-center">
+                <h2 class="impact-headline">Delivering <span class="accent-text">Uncommon</span> Capability.</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">20M+</div>
+                        <div class="stat-label">Code Base LOC Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.99%</div>
+                        <div class="stat-label">System Performance Baseline</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Custom Tooling and Libraries</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section id="team" class="content-section team-section">
             <div class="container">
-                <h2>The <span class="accent-text">Minds</span> Behind the Magic</h2>
-                <p class="section-description">A small, focused team of senior developers and visionary designers.</p>
+                <h2>Engineering <span class="accent-text">Leadership</span></h2>
+                <p class="section-description">A collective of senior engineers and architects focused on long-term systemic impact.</p>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="team-photo-placeholder"><img src="./images/jeremia.jpg" alt=""></div>
+                        <div class="team-photo-placeholder"><img src="./images/jeremia.jpg" alt="Photo of Jeremia Xavier"></div>
                         <h4>Jeremia Xavier</h4>
-                        <p class="role">Developer-Lead</p>
+                        <p class="role">Chief Architect & Developer-Lead</p>
                     </div>
                     <div class="team-member">
-                        <div class="team-photo-placeholder"><img src="./images/abhinav.jpeg" alt=""></div>
+                        <div class="team-photo-placeholder"><img src="./images/abhinav.jpeg" alt="Photo of Abhinav Sajeev"></div>
                         <h4>Abhinav Sajeev</h4>
-                        <p class="role">R&D</p>
+                        <p class="role">Head of Applied R&D</p>
                     </div>
                     <div class="team-member">
                         <div class="team-photo-placeholder"></div>
                         <h4>Tejas</h4>
-                        <p class="role">Head of UX/UI</p>
+                        <p class="role">Director of Digital Experience</p>
                     </div>
                 </div>
             </div>
@@ -110,9 +156,9 @@
 
         <section id="contact" class="content-section cta-section">
             <div class="container glassmorphism-card">
-                <h2>Ready to Build the <span class="accent-text">Future</span>?</h2>
-                <p>We're open to unique collaborations and new challenges. Let's create something non-typical together.</p>
-                <a href="mailto:jeremiaxavier@zohomail.in" class="cta-button large-cta">Get in Touch</a>
+                <h2>Need <span class="accent-text">Exceptional</span> Software?</h2>
+                <p>If your project demands custom, high-performance engineering that goes beyond the typical stack, let's discuss your requirements.</p>
+                <a href="mailto:jeremiaxavier@zohomail.in" class="cta-button large-cta">Begin a Dialogue</a>
             </div>
         </section>
 
@@ -120,10 +166,10 @@
 
     <footer class="glassmorphism-nav">
         <div class="container footer-content">
-            <p>&copy; 2025 JXCorp by Jeremia Xavier.</p>
+            <p>&copy; 2025 JXCorp. Engineered for Complexity.</p>
             <div class="footer-links">
-                <a href="https://jeremiaxavier.web.app" aria-label="Privacy Policy">official</a>
-                <a href="https://jeremiaxavier.github.io" aria-label="Terms of Service">About Jeremia Xavier</a>
+                <!-- <a href="https://jeremiaxavier.web.app" aria-label="Official Website">official</a>
+                <a href="https://jeremiaxavier.github.io" aria-label="About Jeremia Xavier">About Jeremia Xavier</a> -->
             </div>
             <a href="#hero" class="back-to-top" aria-label="Back to top of page">^ Top</a>
         </div>
